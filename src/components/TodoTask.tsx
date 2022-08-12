@@ -18,7 +18,7 @@ export const TodoTask = ({task, completeTask}:Props) => {
 
   return (
 
-    <li className= {`shadow-lg w-full flex justify-between gap-4 items-center pl-4 ${isFinished && 'bg-graylight '}`}>
+    <li className= {`shadow-lg sm:w-full w-[300px] flex justify-between gap-4 items-center pl-4 ${isFinished && 'bg-graylight '}`}>
         <input type="checkbox" onClick={finishTask} className='text-white  cursor-pointer w-[30px] h-[30px]'/>
         <span className={`${isFinished && 'bg-graylight line-through'}`}>{task.taskName}</span>
         <button onClick={()=> completeTask(task.taskName)} className='bg-red text-white p-4'>x</button>

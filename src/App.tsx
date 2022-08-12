@@ -36,13 +36,13 @@ const App: FC = () => {
 
   
 
-<ul className='flex flex-col gap-8 overflow-y-auto min-h-[100px] max-h-[520px] w-[60%] margin-x-auto text-center p-2'>
+<ul className='flex flex-col gap-8 overflow-y-auto min-h-[100px] max-h-[520px] sm:w-[60%] margin-x-auto text-center p-2'>
 
       {
 
         !taskList.length ? <div>
-          <img src='/organize.png'/>
-          <h2 className='font-bold font-mont text-xl'>Nenhuma tarefa criada ainda..</h2>
+          <img src='/organize.png' className='w-[500px] sm:w-full'/>
+          <h2 className='font-bold font-mont sm:text-xl'>Nenhuma tarefa criada ainda..</h2>
         </div> :
         taskList.map((item: ITasks, key:number)=>{
           return <TodoTask key={key} task={item} completeTask={completeTask}/>
@@ -54,7 +54,7 @@ const App: FC = () => {
 
 
       <div className='flex flex-col items-center gap-8'>
-        <input className='border p-2 w-[500px] placeholder:p-4' value={task} type="text"  placeholder='Digite sua tarefa...' onChange={handleChange}/>
+        <input className='border p-2 w-[350px] sm:w-[500px] placeholder:p-4' value={task} type="text"  placeholder='Digite sua tarefa...' onChange={handleChange}/>
         <button className='bg-blue text-white w-[150px] h-[40px] text-lg rounded-lg shadow-xl' onClick={addTask}>CRIAR</button>
       </div>
 
