@@ -54,12 +54,12 @@ const App: FC = () => {
 
 
       <div className='flex flex-col items-center sm:gap-8 gap-2'>
-        <input className='border p-2 w-[350px] sm:w-[500px] placeholder:p-4' value={task} type="text"  placeholder='Digite sua tarefa...' onChange={handleChange}/>
+        <input className='border p-2 w-[330px] sm:w-[500px] placeholder:p-4' value={task} type="text"  placeholder='Digite sua tarefa...' onChange={handleChange}/>
         <button className='bg-blue text-white w-[150px] h-[40px] text-lg rounded-lg shadow-xl' onClick={addTask}>CRIAR</button>
       </div>
 
       <footer>
-        <span className='text-gray'> © Criado por Gabriel Pimenta</span>
+        <span className='text-gray text-sm'> © Criado por Gabriel Pimenta</span>
       </footer>
     </div>
   );
