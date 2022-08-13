@@ -28,10 +28,10 @@ const App: FC = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-between h-screen p-8">
+    <div className="flex flex-col items-center justify-between h-screen p-8 ">
       <header className='text-center'>
-        <h1 className='text-6xl uppercase font-bold'>To do list</h1>
-        <span className='text-gray text-xl'>Gerencie suas tarefas</span>
+        <h1 className=' text-5xl sm:text-6xl uppercase font-bold'>To do list</h1>
+        <span className='text-gray sm:text-xl'>Gerencie suas tarefas</span>
       </header>
 
   
@@ -41,8 +41,8 @@ const App: FC = () => {
       {
 
         !taskList.length ? <div>
-          <img src='/organize.png' className='w-[500px] sm:w-full'/>
-          <h2 className='font-bold font-mont sm:text-xl'>Nenhuma tarefa criada ainda..</h2>
+          <img src='/organize.png' className='w-[450px] sm:w-full'/>
+          <h2 className='font-bold font-mont sm:text-xl text-sm'>Nenhuma tarefa criada ainda..</h2>
         </div> :
         taskList.map((item: ITasks, key:number)=>{
           return <TodoTask key={key} task={item} completeTask={completeTask}/>
@@ -53,7 +53,7 @@ const App: FC = () => {
 </ul>
 
 
-      <div className='flex flex-col items-center gap-8'>
+      <div className='flex flex-col items-center sm:gap-8 gap-2'>
         <input className='border p-2 w-[350px] sm:w-[500px] placeholder:p-4' value={task} type="text"  placeholder='Digite sua tarefa...' onChange={handleChange}/>
         <button className='bg-blue text-white w-[150px] h-[40px] text-lg rounded-lg shadow-xl' onClick={addTask}>CRIAR</button>
       </div>
